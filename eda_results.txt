@@ -1,0 +1,70 @@
+income_groups
+high_income                 28343
+high_income_typo             1475
+low_income                  28433
+low_income_typo              1505
+lower_middle_income         28323
+lower_middle_income_typo     1517
+upper_middle_income         28354
+upper_middle_income_typo     1462
+Name: count, dtype: int64 
+
+age
+0.0      1175
+1.0      1173
+2.0      1173
+3.0      1190
+4.0      1173
+         ... 
+96.0     1191
+97.0     1194
+98.0     1178
+99.0     1192
+100.0    1174
+Name: count, Length: 101, dtype: int64 
+
+gender
+1.0    56777
+2.0    56748
+3.0     6286
+Name: count, dtype: int64 
+
+year
+1950.0    788
+1951.0    782
+1952.0    787
+1953.0    780
+1954.0    797
+         ... 
+2115.0      3
+2116.0      2
+2117.0      1
+2118.0      1
+2119.0      3
+Name: count, Length: 169, dtype: int64 
+
+population
+2.100000e+01    2
+2.200000e+01    1
+2.400000e+01    1
+2.500000e+01    1
+2.800000e+01    2
+               ..
+3.231194e+10    1
+3.233189e+10    1
+3.251144e+10    1
+3.263962e+10    1
+3.293043e+10    1
+Name: count, Length: 114925, dtype: int64 
+
+Total NA count by column:
+income_groups    6306
+age              6223
+gender           5907
+year             6202
+population       6340
+dtype: int64 
+
+Total duplicated rows:
+2950 
+
