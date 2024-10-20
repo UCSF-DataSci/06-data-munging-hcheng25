@@ -39,30 +39,30 @@
 
 ### Possible Issues
 **Typos in *income_groups***
-    - Some values under *income_groups* have *_typo* appended to the end
-    - Potential impact: adds additional invalid possible values for this column, causes data entries that should be grouped together when stratified by *income_groups* to be separated
+- Some values under *income_groups* have *_typo* appended to the end
+- Potential impact: adds additional invalid possible values for this column, causes data entries that should be grouped together when stratified by *income_groups* to be separated
 
 **Gender 3**
-    - A relatively small, but significant fraction of data entries have the number 3 written under *gender*, which is likely an invalid option as most studies separate *gender* into two categories.
-    - Potential impact: data entries with a 3 cannot contribute to the statistics of appropriate *gender* category, and the 3 creates a third *gender* category that likely should not be there at all
+- A relatively small, but significant fraction of data entries have the number 3 written under *gender*, which is likely an invalid option as most studies separate *gender* into two categories.
+- Potential impact: data entries with a 3 cannot contribute to the statistics of appropriate *gender* category, and the 3 creates a third *gender* category that likely should not be there at all
 
 **Future years**
-    - The *year* column contains entries that are in the future, which should not be possible.
-    - Potential impact: the data is incorrect and could affect any analysis of time trends
+- The *year* column contains entries that are in the future, which should not be possible.
+- Potential impact: the data is incorrect and could affect any analysis of time trends
 
 **Possible outliers**
-    - The *population* column has high variability, and according to the summary statistics shown by .describe(), there is at least one outlier in the maximum of the data when using the "1.5 times IQR" rule.
-    - Potential impact: outliers could skew statistical analyses and result in conclusions that do not reflect the average in reality
+- The *population* column has high variability, and according to the summary statistics shown by .describe(), there is at least one outlier in the maximum of the data when using the "1.5 times IQR" rule.
+- Potential impact: outliers could skew statistical analyses and result in conclusions that do not reflect the average in reality
 
 **NA values**
-    - Several thousand values are not valid
-    - Affects all columns
-    - Potential impact: using incomplete data for data analysis may result in inaccurate statistical analyses if some entries can only contribute to some columns of data and not others
+- Several thousand values are not valid
+- Affects all columns
+- Potential impact: using incomplete data for data analysis may result in inaccurate statistical analyses if some entries can only contribute to some columns of data and not others
 
 **Duplicated Rows**
-    - .duplicated() found 2950 rows of data that are completely duplicated.
-    - Affects all columns
-    - Potential impact: would cause the duplicated data to have an inaccurately large impact during analysis compared to non-duplicated data
+- .duplicated() found 2950 rows of data that are completely duplicated.
+- Affects all columns
+- Potential impact: would cause the duplicated data to have an inaccurately large impact during analysis compared to non-duplicated data
 
 ## 2. Data Cleaning
 
