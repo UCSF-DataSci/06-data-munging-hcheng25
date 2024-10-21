@@ -1,0 +1,127 @@
+Step 1: remove NAs 
+
+Rows and columns remaining after removing NAs: (97639, 5) 
+
+Step 2: remove future years and gender 3 
+
+gender
+1.0    22572
+2.0    22685
+Name: count, dtype: int64 
+
+year
+1950.0    618
+1951.0    607
+1952.0    602
+1953.0    597
+1954.0    631
+         ... 
+2019.0    629
+2020.0    598
+2021.0    625
+2022.0    609
+2023.0    613
+Name: count, Length: 74, dtype: int64 
+
+Rows and columns remaining after removing future years and gender 3: (45257, 5) 
+
+Step 3: remove population outliers 
+
+Rows and columns remaining after removing population outliers: (40864, 5) 
+
+Step 4: fix income_groups typos 
+
+income_groups
+high_income            11070
+low_income             11175
+lower_middle_income     9290
+upper_middle_income     9329
+Name: count, dtype: int64
+No typos remaining 
+
+Step 5: remove duplicate rows 
+
+Duplicate rows remaining: 0
+Rows and columns remaining after removing duplicate rows: (39757, 5) 
+
+Rows and columns remaining after cleaning (39757, 5) 
+
+                age        gender          year    population
+count  39757.000000  39757.000000  39757.000000  3.975700e+04
+mean      53.030963      1.504062   1985.218729  4.786459e+06
+std       28.442907      0.499990     21.337814  4.860492e+06
+min        0.000000      1.000000   1950.000000  2.200000e+01
+25%       30.000000      1.000000   1967.000000  6.546700e+05
+50%       54.000000      2.000000   1984.000000  3.551667e+06
+75%       78.000000      2.000000   2004.000000  7.372574e+06
+max      100.000000      2.000000   2023.000000  1.957649e+07 
+
+Unique values per column:
+income_groups        4
+age                101
+gender               2
+year                74
+population       39308
+dtype: int64 
+
+Column means:
+age           5.303096e+01
+gender        1.504062e+00
+year          1.985219e+03
+population    4.786459e+06
+dtype: float64 
+
+income_groups
+high_income            10746
+low_income             10877
+lower_middle_income     9042
+upper_middle_income     9092
+Name: count, dtype: int64 
+
+age
+0.0      287
+1.0      307
+2.0      305
+3.0      302
+4.0      302
+        ... 
+96.0     421
+97.0     433
+98.0     432
+99.0     441
+100.0    440
+Name: count, Length: 101, dtype: int64 
+
+gender
+1.0    19717
+2.0    20040
+Name: count, dtype: int64 
+
+year
+1950.0    593
+1951.0    580
+1952.0    584
+1953.0    571
+1954.0    597
+         ... 
+2019.0    507
+2020.0    483
+2021.0    496
+2022.0    479
+2023.0    490
+Name: count, Length: 74, dtype: int64 
+
+population
+22.0          1
+24.0          1
+25.0          1
+28.0          2
+29.0          1
+             ..
+19574037.0    1
+19574748.0    1
+19574950.0    1
+19575199.0    1
+19576486.0    1
+Name: count, Length: 39308, dtype: int64 
+

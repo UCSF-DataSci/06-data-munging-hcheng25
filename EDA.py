@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('messy_population_data.csv')
 with open('eda_results.txt', 'wt') as fout:
-    print(df.info(), '\n', file = fout) # prints into terminal
+    df.info() # prints into terminal
     print(df.describe(), '\n', file = fout)
     # count unique values
     print('Unique values per column:', file = fout)
@@ -31,3 +31,6 @@ with open('eda_results.txt', 'wt') as fout:
     popdata = popdata.sort_values(by = 'population')
     popdata = popdata.dropna()
     print(popdata, '\n', file = fout)
+    # how many rows have future years?
+    futureyear = df[df['year']>2023]
+    print('# of rows/columns with future years:', futureyear.shape, file = fout)

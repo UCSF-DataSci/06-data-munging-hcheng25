@@ -110,3 +110,5 @@ Total duplicated rows:
 
 [95810 rows x 5 columns] 
 
+# of rows/columns with future years: (60997, 5)
+# of rows/columns with gender 3: (6286, 5)
