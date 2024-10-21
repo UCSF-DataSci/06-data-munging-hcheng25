@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv('messy_population_data.csv')
 with open('eda_results.txt', 'wt') as fout:
@@ -22,3 +23,11 @@ with open('eda_results.txt', 'wt') as fout:
     # count the number of completely duplicated rows
     print('Total duplicated rows:', file = fout)
     print(df.duplicated().sum(), '\n', file = fout)
+    # identify outliers in population
+    Q1 = df['population'].quantile(0.25)
+    Q3 = df['population'].quantile(0.75)
+    IQR = Q3 - Q1
+    popdata = df[~((df['population'] < (Q1 - 1.5 * IQR)) | (df['population'] > (Q3 + 1.5 * IQR)))]
+    popdata = popdata.sort_values(by = 'population')
+    popdata = popdata.dropna()
+    print(popdata, '\n', file = fout)

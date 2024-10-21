@@ -51,8 +51,8 @@
 - Potential impact: the data is incorrect and could affect any analysis of time trends
 
 **Possible outliers**
-- The *population* column has high variability, and according to the summary statistics shown by .describe(), there is at least one outlier in the maximum of the data when using the "1.5 times IQR" rule.
-- Potential impact: outliers could skew statistical analyses and result in conclusions that do not reflect the average in reality
+- The *population* column has high variability, and there are several values considered outliers when using 1.5 times the IQR to identify them.
+- Potential impact: Outliers can indicate an error in measurement or data entry. Additionally, true outliers could skew statistical analyses and result in conclusions that do not reflect the average in reality.
 
 **NA values**
 - Several thousand values are not valid
@@ -81,6 +81,8 @@
 #code
 ```
 - **Justification**: It's impossible to be certain what year was intended to be entered in the invalid future year entries or what gender was intended to be entered for those with "3" entered, so it would be easier to exclude those rows altogether.
+
+### Issue 3: *population* outliers
 
 ### Issue 3: Typos in *income_groups*
 - **Cleaning Method**: Remove *_typo* from the end of entries that have them

@@ -95,3 +95,18 @@ dtype: int64
 Total duplicated rows:
 2950 
 
+              income_groups    age  gender    year  population
+60711            low_income   99.0     1.0  1959.0        22.0
+60712            low_income   99.0     1.0  1960.0        24.0
+60709            low_income   99.0     1.0  1957.0        25.0
+31416            low_income  100.0     1.0  1958.0        28.0
+31417            low_income  100.0     1.0  1959.0        28.0
+...                     ...    ...     ...     ...         ...
+64991   lower_middle_income    2.0     1.0  2011.0  33152977.0
+71638   lower_middle_income    4.0     1.0  2014.0  33161734.0
+74965   lower_middle_income    5.0     1.0  2019.0  33164222.0
+125484  lower_middle_income   12.0     1.0  2025.0  33172468.0
+62589   lower_middle_income   12.0     1.0  2025.0  33172468.0
+
+[95810 rows x 5 columns] 
+
